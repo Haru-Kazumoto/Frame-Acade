@@ -6,8 +6,12 @@ use App\Repository\Interfaces\CertificationRepositoryInterfaces;
 use Illuminate\Http\Request;
 
 class CertificationRepository implements CertificationRepositoryInterfaces{
-    public function getAllData(array $relations){
-        return Certifications::with($relations)->get();
+    public function getAllData(?array $relations){
+        if(!empty($relations)){
+            return Certifications::with($relations)->get();
+        }
+        
+        return Certifications::all();
     }
 
     public function getDataById($id){

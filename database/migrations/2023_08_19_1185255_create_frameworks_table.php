@@ -15,7 +15,6 @@ return new class extends Migration
             $table->id();
             $table->string("title");
             $table->string("keyFrameworks")->unique();
-            $table->integer("progress"); //buat logic ambil data dari field subCouress isDone yang harus true maka akan bernilai sebuah angka progress *membutuhkan rumus perhitungan persentase*
             $table->enum("frameworkType",["BACKEND","FRONTEND"]);
             $table->date("courseEndDate")->default(null);
 

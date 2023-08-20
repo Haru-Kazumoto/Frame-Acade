@@ -15,15 +15,11 @@ return new class extends Migration
             $table->id();
             $table->string("imageCertification")->unique();
             $table->enum("division",["BACKEND","FRONTEND"]);
+            $table->date("certificationGetDate");
 
             $table->foreignId('user_id')->constrained('users')->cascadeOnDelete(); //many to one ke user
-            $table->foreignId('modules_id')->constrained('modules')->cascadeOnDelete();
+            $table->foreignId('modules_id')->constrained('modules')->cascadeOnDelete(); 
             $table->timestamps();
-                
-            /**
-             * sertifikat berelasi many to one dengan user [DONE]
-             * sertifikat berelasi many to many dengan course [DONE]
-             */
         });
     }
 

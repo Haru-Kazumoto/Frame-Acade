@@ -6,11 +6,6 @@
             <h1 class="font-bold text-[24px]">
                 Muhammad Akhbar Firdaus.
             </h1>
-
-
-
-            
-
         </div>
         <span class="text-[20px] mt-[1.5rem] mb-[1rem]">
             Top framework

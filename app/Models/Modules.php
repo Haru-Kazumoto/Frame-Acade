@@ -12,7 +12,7 @@ class Modules extends Model {
 
     protected $fillable = [
         'titleModules',
-        'keyFramework'
+        'keyFramework' //untuk mengambil key nama framework nya (contoh: reactjs, dll...)
     ];
 
     //Modules ini berelasi one to many dari SubModules

@@ -6,7 +6,6 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
-use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Http\Request;
 
 class Certifications extends Model
@@ -16,6 +15,11 @@ class Certifications extends Model
     protected $fillable = [
         'imageCertification',
         'division'
+    ];
+
+    protected $hidden = [
+        'created_at',
+        'updated_at'
     ];
 
     //Certifications ini berelasi many to one ke Users

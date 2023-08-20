@@ -14,7 +14,6 @@ return new class extends Migration
         Schema::create('submodules', function (Blueprint $table) {
             $table->id();
             $table->string("titleSubCourses");
-            $table->boolean("isDone")->default(false);
 
             $table->foreignId("module_id")->constrained("modules")->cascadeOnDelete();
             $table->timestamps();

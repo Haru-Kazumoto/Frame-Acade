@@ -12,7 +12,6 @@ class SubModules extends Model
 
     protected $fillable = [
         'subModuleTitle',
-        'isDone',
     ];
 
     //SubModules ini berelasi many to one ke Modules
