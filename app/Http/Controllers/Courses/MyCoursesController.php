@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Courses;
 use App\Http\Controllers\Controller;
 use App\Models\Courses;
 use App\Models\UserCourses;
+use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
@@ -63,5 +64,11 @@ class MyCoursesController extends Controller
 
 
         return view("learn")->with('course',$course);
+    }
+
+    public function certificate() {
+
+        $pdf = Pdf::loadView('certificate.certificate-content');
+        return $pdf->download('certificate.pdf');
     }
 }
