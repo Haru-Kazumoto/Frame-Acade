@@ -15,6 +15,7 @@ class MyCoursesController extends Controller
     public function index() {
 
         $course_id = UserCourses::where("user_id",Auth::user()->id)->orderBy("user_courses.done_at","desc")->first();
+        if($course_id){
         $recent = DB::table("courses")
             ->join("user_courses","user_courses.course_id","courses.id")
             ->where("user_courses.user_id",Auth::user()->id)
@@ -32,6 +33,9 @@ class MyCoursesController extends Controller
             ')
             ->groupByRaw("user_id,courses.id")
             ->first();
+        }else{
+            $recent = null;
+        }
 
 
         $lists = DB::table("courses")
