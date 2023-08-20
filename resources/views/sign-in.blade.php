@@ -28,9 +28,8 @@
                 </div>
             </div>
 
-            <form action="" class="flex flex-col  items-center">
+            <form action="" class="flex flex-col  items-center ">
                 <div>
-
                     <label for="input-group-1" class=" block mb-2 text-sm font-medium text-gray-900">Your
                         Email</label>
                     <div class="relative mb-6">
