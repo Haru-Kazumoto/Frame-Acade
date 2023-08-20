@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Courses;
 use App\Http\Controllers\Controller;
 use App\Models\Courses;
 use App\Models\UserCourses;
+use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
@@ -14,6 +15,7 @@ class MyCoursesController extends Controller
     public function index() {
 
         $course_id = UserCourses::where("user_id",Auth::user()->id)->orderBy("user_courses.done_at","desc")->first();
+        if($course_id){
         $recent = DB::table("courses")
             ->join("user_courses","user_courses.course_id","courses.id")
             ->where("user_courses.user_id",Auth::user()->id)
@@ -31,6 +33,9 @@ class MyCoursesController extends Controller
             ')
             ->groupByRaw("user_id,courses.id")
             ->first();
+        }else{
+            $recent = null;
+        }
 
 
         $lists = DB::table("courses")
@@ -63,5 +68,11 @@ class MyCoursesController extends Controller
 
 
         return view("learn")->with('course',$course);
+    }
+
+    public function certificate() {
+
+        $pdf = Pdf::loadView('certificate.certificate-content');
+        return $pdf->download('certificate.pdf');
     }
 }

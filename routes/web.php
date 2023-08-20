@@ -34,6 +34,7 @@ Route::middleware('auth')->group(function () {
     Route::get("/course/{id}",[AllCoursesController::class,"detail"])->name("detail-course");
     Route::get("/enrolled/{course_id}",[AllCoursesController::class,"enrolled"])->name("enrolled-courses");
     Route::get("/learn/{course_id}",[MyCoursesController::class,"learn"])->name("learn-course");
+    Route::get("/reward",[MyCoursesController::class,"certificate"])->name("cs");
 });
 
 Route::middleware('auth')->prefix("/certifications")->group(function(){
