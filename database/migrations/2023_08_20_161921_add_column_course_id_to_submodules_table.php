@@ -11,12 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('submodules', function (Blueprint $table) {
-            $table->id();
-            $table->string("titleSubCourses");
-
-            $table->foreignId("module_id")->constrained("modules")->cascadeOnDelete();
-            $table->timestamps();
+        Schema::table('submodules', function (Blueprint $table) {
+            $table->integer("module_id");
+            $table->integer("course_id");
         });
     }
 
@@ -25,6 +22,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('submodules');
+        Schema::table('submodules', function (Blueprint $table) {
+            //
+        });
     }
 };

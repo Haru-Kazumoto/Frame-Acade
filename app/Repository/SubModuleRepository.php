@@ -1,13 +1,13 @@
 <?php
 
 namespace App\Repository;
-use App\Models\SubModules;
+use App\Models\Submodules;
 use App\Repository\Interfaces\SubModuleRepositoryInterfaces;
 use Illuminate\Http\Request;
 
 class SubModuleRepository implements SubModuleRepositoryInterfaces{
     public function getAllData(array $relations){
-        return SubModules::with($relations)->get();
+        return Submodules::with($relations)->get();
     }
 
     public function getDataById($id){
