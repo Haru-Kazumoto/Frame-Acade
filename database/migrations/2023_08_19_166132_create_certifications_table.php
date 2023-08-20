@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('certifications', function (Blueprint $table) {
             $table->id();
             $table->string("imageCertification")->unique();
-            $table->enum("division",["BACKEND","FRONTEND"]);
+            $table->string('division');
             $table->date("certificationGetDate");
 
             $table->foreignId('user_id')->constrained('users')->cascadeOnDelete(); //many to one ke user

@@ -2,7 +2,7 @@
     <div class="flex items-center">
 
         {{-- LOGO --}}
-        <a href="/" class="flex items-center">
+        <a href="#" class="flex items-center">
             <img src="Logo-FrameAcade.png" alt="" width="50">
 
             {{-- DIVIDER --}}

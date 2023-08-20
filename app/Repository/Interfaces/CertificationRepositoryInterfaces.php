@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Repository\Interfaces;
+use Illuminate\Http\Request;
 
 interface CertificationRepositoryInterfaces{
     public function getAllData(?array $relations);

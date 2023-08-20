@@ -1,1 +1,1 @@
-@include('partials.navbar')
+@extends('partials.navbar')
