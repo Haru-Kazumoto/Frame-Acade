@@ -12,11 +12,11 @@
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-{{--                    <x-nav-link :href="route('my-courses')" :active="request()->routeIs('dashboard')">--}}
-{{--                        {{ __('All Courses') }}--}}
-{{--                    </x-nav-link>--}}
                     <x-nav-link :href="route('my-courses')" :active="request()->routeIs('my-courses')">
                         {{ __('My Courses') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('all-courses')" :active="request()->routeIs('all-courses')">
+                        {{ __('All Courses') }}
                     </x-nav-link>
                 </div>
             </div>
