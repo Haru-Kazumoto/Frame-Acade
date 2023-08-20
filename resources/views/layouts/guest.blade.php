@@ -16,22 +16,7 @@
     </head>
     <body class="font-sans text-gray-900 antialiased">
         <div class="w-full min-h-screen flex">
-            <div class="min-h-screen w-1/2 flex flex-col items-center justify-center rounded-r-[35px]" style="background-color: #697899;">
-                <h1 class="text-white text-5xl mb-10">Let's Start Learn With</h1>
-                <a href="/">
-                    <img src="{{url('/Logo.png')}}" alt="logo" />
-                </a>
-            </div>
-
-            <div class="flex flex-col justify-center w-1/2 px-48">
-                <div class="mb-[50px]">
-                    <h1 class="text-5xl font-extrabold" style="color:#697899;">Sign In to </h1>
-                    <h1 class="text-5xl font-extrabold" style="color:#697899;">Frame<span style="color:#F6B21B;">Acade</span></h1>
-                </div>
-                <div class="w-full">
-                    {{ $slot }}
-                </div>
-            </div>
+            {{ $slot }}
         </div>
     </body>
 </html>
