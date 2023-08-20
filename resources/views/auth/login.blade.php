@@ -1,6 +1,6 @@
 <x-guest-layout>
     <!-- Session Status -->
-    <x-auth-session-status class="mb-4" :status="session('status')" />
+    <x-auth-session-status class="mb-3" :status="session('status')" />
         <form method="POST" action="{{ route('login') }}">
             @csrf
     
@@ -31,14 +31,18 @@
                 </label>
             </div>
     
-            <div class="flex items-center justify-end mt-4">
+            <div class="flex flex-col items-center justify-end mt-4">
                 @if (Route::has('password.request'))
                     <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('password.request') }}">
-                        {{ __('Forgot your password?') }}
+                        {{ __('Forgot your password?') }} 
                     </a>
                 @endif
+                or
+                <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('password.request') }}">
+                    {{ __('Register FrameAcade member') }} 
+                </a>
     
-                <x-primary-button class="ml-3">
+                <x-primary-button class="ml-3 mt-5">
                     {{ __('Log in') }}
                 </x-primary-button>
             </div>
