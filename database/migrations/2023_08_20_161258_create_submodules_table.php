@@ -11,12 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('modules', function (Blueprint $table) {
+        Schema::create('submodules', function (Blueprint $table) {
             $table->id();
-            $table->string("keyFrameworks")->unique();
-            $table->string("titleModule");
-
-            $table->foreignId("framework_id")->constrained("frameworks")->cascadeOnDelete(); //many to many ke user
+            $table->string("name");
+            $table->string("type"); // blog, question
             $table->timestamps();
         });
     }
@@ -26,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('modules');
+        Schema::dropIfExists('submodules');
     }
 };

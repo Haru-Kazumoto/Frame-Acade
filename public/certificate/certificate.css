@@ -29,16 +29,17 @@
 
 .certificate p {
     font-family: "Poppins", sans-serif;
+    font-size: 20px;
 }
 
 .certificate h1 {
     font-family: "Imperial Script", cursive;
-    font-size: 90px;
+    font-size: 130px;
     font-weight: normal;
 }
 .certificate .name {
     font-family: "Poppins", sans-serif;
-    font-size: 34;
+    font-size: 40px;
     font-weight: bolder;
 }
 
@@ -56,7 +57,7 @@
 
 .logo h1 {
     font-family: "Poppins", sans-serif;
-    font-size: 24px;
+    font-size: 30px;
     font-weight: bold;
 }
 
