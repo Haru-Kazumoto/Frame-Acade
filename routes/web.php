@@ -18,11 +18,7 @@ use App\Http\Controllers\Courses\AllCoursesController;
 */
 
 Route::get('/', function () {
-<<<<<<< HEAD
     return redirect('/login');
-=======
-     return redirect('/my-courses');
->>>>>>> 1fb497e53295c27f2a6cfcc9329f14ac146af5fa
 });
 
 //Route::get('/dashboard', function () {

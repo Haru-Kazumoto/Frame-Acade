@@ -25,12 +25,7 @@
                                     </div>
                                     <div class="flex justify-between mb-1 mt-3">
                                         <span class="text-sm font-medium text-black">Progress</span>
-<<<<<<< HEAD
                                         <span class="text-sm font-medium text-black">{{ ($recent->done / $recent->total)*100 }}%</span>
-=======
-                                        <span
-                                            class="text-sm font-medium text-black">{{ ($recent->done / $recent->total) * 100 }}%</span>
->>>>>>> 1fb497e53295c27f2a6cfcc9329f14ac146af5fa
                                     </div>
                                     <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
                                         <div class="bg-blue-600 h-2.5 rounded-full"
@@ -46,29 +41,6 @@
                     </div>
                 </div>
             @endif
-<<<<<<< HEAD
-            <div class="bg-white shadow-sm sm:rounded-lg mt-5">
-                <h1 class="p-6 text-gray-900 text-3xl font-semibold">
-                    {{ __("Your progress course") }}
-                </h1>
-                <div class="p-6">
-            @foreach($courses as $course)
-                <div class="mt-5">
-                    <div class="border border-gray-500 p-5 rounded-lg">
-                        <div class="flex gap-3 items-center">
-                            <div class="h-5 w-5 bg-gray-400 rounded-full "></div>
-                            <div class="flex-1">
-                                <div class="text-lg"> {{ $course->name }} </div>
-                                <div class="text-sm">
-                                    {{ $course->description }}
-                                </div>
-                                <div class="flex justify-between mb-1 mt-3">
-                                    <span class="text-sm font-medium text-black">Progress</span>
-                                    <span class="text-sm font-medium text-black">{{ ($course->done / $course->total)*100 }}%</span>
-                                </div>
-                                <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
-                                    <div class="bg-blue-600 h-2.5 rounded-full" style="width: {{($course->done / $course->total)*100}}%"></div>
-=======
 
             @if ($courses->isEmpty())
                 <div class="bg-white shadow-sm sm:rounded-lg mt-3 px-[2rem] py-[4rem]  flex flex-col ">
@@ -108,7 +80,6 @@
                                             Continue
                                         </a>
                                     </div>
->>>>>>> 1fb497e53295c27f2a6cfcc9329f14ac146af5fa
                                 </div>
                             </div>
                         @endforeach
