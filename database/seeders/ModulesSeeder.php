@@ -13,6 +13,6 @@ class ModulesSeeder extends Seeder
      */
     public function run(): void
     {
-        Modules::factory()->count(20)->create();
+        Modules::factory()->count(9)->create();
     }
 }

@@ -1,5 +1,5 @@
 <x-guest-layout>
-
+    
     <div class="min-h-screen w-1/2 flex flex-col items-center justify-center rounded-r-[35px]"
         style="background-color: #697899;">
         <h1 class="text-white text-5xl">Let's Start Learn With</h1>

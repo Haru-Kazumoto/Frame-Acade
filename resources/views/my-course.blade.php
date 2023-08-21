@@ -3,7 +3,7 @@
 <x-app-layout>
     <x-slot name="header" class="fixed">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Welcome Back,') }} {{ Auth::user()->username . '!' }}
+            {{ __('Selamat datang,') }} {{ Auth::user()->username . '!' }}
         </h2>
     </x-slot>
 
@@ -46,7 +46,7 @@
                 <div class="bg-white shadow-sm sm:rounded-lg mt-3 px-[2rem] py-[4rem]  flex flex-col ">
                     <img src="/image/0progress.png" alt="0 progress" class="mx-auto pr-[3rem] min-w-[20rem] ">
                     <h1 class="p-6 text-gray-900 text-3xl font-semibold mt-10 mx-auto">
-                        Seem’s you have not started course anything, let’s learn!
+                        Sepertinya kamu belum belajar, ayo ambil kursus!
                     </h1>
                 </div>
             @else
