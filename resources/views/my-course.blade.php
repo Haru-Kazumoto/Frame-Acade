@@ -22,7 +22,7 @@
                                         {{ $recent->description }}
                                     </div>
                                     <div class="flex justify-between mb-1 mt-3">
-                                        <span class="text-base text-sm font-medium text-black">Progress</span>
+                                        <span class="text-sm font-medium text-black">Progress</span>
                                         <span class="text-sm font-medium text-black">{{ ($recent->done / $recent->total)*100 }}%</span>
                                     </div>
                                     <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
@@ -41,7 +41,7 @@
             @endif
             <div class="bg-white shadow-sm sm:rounded-lg mt-5">
                 <h1 class="p-6 text-gray-900 text-3xl font-semibold">
-                    {{ __("All Enrolled Courses") }}
+                    {{ __("Your progress course") }}
                 </h1>
                 <div class="p-6">
             @foreach($courses as $course)
@@ -55,7 +55,7 @@
                                     {{ $course->description }}
                                 </div>
                                 <div class="flex justify-between mb-1 mt-3">
-                                    <span class="text-base text-sm font-medium text-black">Progress</span>
+                                    <span class="text-sm font-medium text-black">Progress</span>
                                     <span class="text-sm font-medium text-black">{{ ($course->done / $course->total)*100 }}%</span>
                                 </div>
                                 <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">

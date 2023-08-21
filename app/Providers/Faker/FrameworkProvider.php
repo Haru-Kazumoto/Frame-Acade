@@ -21,74 +21,74 @@ class FrameworkProvider extends Base
 
     protected static $content = [
         'CakePHP' => [
-            "type" => "backend",
+            "type" => "BACKEND",
             "description" => "CakePHP is a popular open-source PHP web framework known for its simplicity and rapid development capabilities.",
-            "logo" => "https://example.com/cakephp_logo.png"
+            "logo" => "/image/cakephp_logo.png"
         ],
         'CodeIgniter' => [
-            "type" => "backend",
+            "type" => "BACKEND",
             "description" => "CodeIgniter is a lightweight PHP framework that offers a small footprint and high performance for building web applications.",
-            "logo" => "https://example.com/codeigniter_logo.png"
+            "logo" => "/image/codeigniter_logo.png"
         ],
         'Laravel' => [
-            "type" => "backend",
+            "type" => "BACKEND",
             "description" => "Laravel is a powerful PHP web framework with elegant syntax and features like ORM, routing, and authentication.",
-            "logo" => "https://example.com/laravel_logo.png"
+            "logo" => "/image/laravel_logo.png"
         ],
         'Lumen' => [
-            "type" => "backend",
+            "type" => "BACKEND",
             "description" => "Lumen is a micro-framework by Laravel designed for building fast and efficient microservices and APIs.",
-            "logo" => "https://example.com/lumen_logo.png"
+            "logo" => "/image/lumen_logo.png"
         ],
         'Phalcon' => [
-            "type" => "backend",
+            "type" => "BACKEND",
             "description" => "Phalcon is a full-stack PHP framework delivered as a C extension, offering high performance and low resource consumption.",
-            "logo" => "https://example.com/phalcon_logo.png"
+            "logo" => "/image/phalcon_logo.png"
         ],
         'Slim' => [
-            "type" => "backend",
+            "type" => "BACKEND",
             "description" => "Slim is a PHP micro-framework designed for building simple yet powerful web applications and APIs.",
-            "logo" => "https://example.com/slim_logo.png"
+            "logo" => "/image/slim_logo.png"
         ],
         'Symfony' => [
-            "type" => "backend",
+            "type" => "BACKEND",
             "description" => "Symfony is a mature and highly customizable PHP framework used to build complex web applications.",
-            "logo" => "https://example.com/symfony_logo.png"
+            "logo" => "/image/symfony_logo.png"
         ],
         'Spring Boot' => [
-            "type" => "backend",
+            "type" => "BACKEND",
             "description" => "Spring Boot is an opinionated framework for building production-ready Java applications with ease.",
-            "logo" => "https://example.com/spring_boot_logo.png"
+            "logo" => "/image/springboot_logo.png"
         ],
         'NextJS' => [
-            "type" => "frontend",
+            "type" => "FRONTEND",
             "description" => "Next.js is a popular React framework that enables server-side rendering and seamless client-side routing for fast web applications.",
-            "logo" => "https://example.com/nextjs_logo.png"
+            "logo" => "/image/nextjs_logo.png"
         ],
         'NestJS' => [
-            "type" => "backend",
+            "type" => "BACKEND",
             "description" => "NestJS is a progressive Node.js framework for building efficient and scalable server-side applications.",
-            "logo" => "https://example.com/nestjs_logo.png"
+            "logo" => "/image/nestjs_logo.png"
         ],
         'FastAPI' => [
-            "type" => "backend",
+            "type" => "BACKEND",
             "description" => "FastAPI is a modern, fast (high-performance) web framework for building APIs with Python 3.7+ based on standard Python type hints.",
-            "logo" => "https://example.com/fastapi_logo.png"
+            "logo" => "/image/fastapi_logo.png"
         ],
         'Flask' => [
-            "type" => "backend",
+            "type" => "BACKEND",
             "description" => "Flask is a lightweight Python web framework that provides the essentials for building web applications.",
-            "logo" => "https://example.com/flask_logo.png"
+            "logo" => "/image/flask_logo.png"
         ],
         'Express.js' => [
-            "type" => "backend",
+            "type" => "BACKEND",
             "description" => "Express.js is a fast, unopinionated, and minimalist web framework for Node.js, used to build web applications and APIs.",
-            "logo" => "https://example.com/expressjs_logo.png"
+            "logo" => "/image/expressjs_logo.png"
         ],
         'Meteor' => [
-            "type" => "fullstack",
+            "type" => "BACKEND",
             "description" => "Meteor is a full-stack JavaScript framework for building real-time web applications.",
-            "logo" => "https://example.com/meteor_logo.png"
+            "logo" => "/image/meteor_logo.png"
         ],
     ];
 
@@ -108,5 +108,4 @@ class FrameworkProvider extends Base
     public function logo($framework) : string {
         return static::$content[$framework]["logo"];
     }
-
 }

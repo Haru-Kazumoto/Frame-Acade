@@ -4,7 +4,6 @@ namespace App\Http\Controllers\Courses;
 
 use App\Http\Controllers\Controller;
 use App\Models\Courses;
-use App\Models\Modules;
 use App\Models\SubModules;
 use App\Models\UserCourses;
 use Illuminate\Support\Facades\Auth;
