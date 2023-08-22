@@ -59,7 +59,7 @@
                             <div class="mt-5">
                                 <div class="border border-gray-500 p-5 rounded-lg">
                                     <div class="flex gap-3 items-center">
-                                        <div class="h-5 w-5 bg-gray-400 rounded-full "></div>
+                                        <div class="h-5 w-5 bg-gray-400 rounded-full "></div> 
                                         <div class="flex-1">
                                             <div class="text-lg"> {{ $course->name }} </div>
                                             <div class="text-sm">

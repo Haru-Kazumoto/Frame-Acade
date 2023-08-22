@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Helpers\RequestBody;
 use App\Http\Controllers\Controller;
+use App\Models\User;
 use App\Models\Users;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -31,7 +32,7 @@ class AuthController extends Controller {
             ]
         ]);
         
-        $user = Users::where('email', $request->email)->first();
+        $user = User::where('email', $request->email)->first();
 
         if(!$user || !Hash::check($request->password, $user->password)){
             throw ValidationException::withMessages([

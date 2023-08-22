@@ -11,16 +11,10 @@ use Illuminate\Http\Request;
 use App\Models\User;
 
 class UserController extends Controller {
-    
-    private UserRepositoryInterfaces $userRepository;
 
-    public function __construct(UserRepositoryInterfaces $userRepository){
-        $this->userRepository = $userRepository;
-    }
+    // public function index(){
+    //     $users = $this->userRepository->getAllData(['certifications','frameworks']);
 
-    public function index(){
-        $users = $this->userRepository->getAllData(['certifications','frameworks']);
-
-        return ApiResponse::successResponse($users);
-    }
+    //     return ApiResponse::successResponse($users);
+    // }
 }

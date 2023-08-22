@@ -9,8 +9,7 @@ use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
-class MyCoursesController extends Controller
-{
+class MyCoursesController extends Controller {
 
     public function index() {
 

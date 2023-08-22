@@ -1,6 +1,8 @@
 <?php
 
-use App\Http\Controllers\{UserController, AuthController};
+use App\Http\Controllers\{UserController, AuthController, CertificationController, ModulesController};
+use App\Http\Controllers\Modules\SubModulesController;
+use App\Http\Controllers\MyCourseControllerApi;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -32,4 +34,14 @@ Route::prefix('/auth')->group(function(){
     Route::post("/register", [AuthController::class, 'register']);
     Route::post('/logout', [AuthController::class, 'logout'])->middleware('auth:sanctum');
     Route::get("/get-session", [AuthController::class, 'getSessionUser'])->middleware('auth:sanctum');
+});
+
+Route::get('/modules', [CertificationController::class, 'index']);
+
+Route::get('/all-course', [MyCourseControllerApi::class, 'getAllCourse']);
+
+Route::prefix("/modules")->group(function(){
+    Route::get('/subModules', [SubModulesController::class, 'index']);
+    Route::post('/create-subModules', [SubModulesController::class, 'create']);
+    Route::get('/get/{$id}', [ModulesController::class], 'getCourseById');
 });

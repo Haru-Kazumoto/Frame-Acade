@@ -13,6 +13,11 @@ class Modules extends Model {
     protected $fillable = [
         'name',
         'course_id'
+    ];    
+
+    protected $hidden = [
+        'created_at',
+        'updated_at'
     ];
 
     //Modules ini berelasi one to many dari Submodules

@@ -21,6 +21,11 @@ class SubModules extends Model
         "module_id"
     ];
 
+    protected $hidden = [
+        'created_at',
+        'updated_at'
+    ];
+
     //SubModules ini berelasi many to one ke Modules
     public function modules(): BelongsTo{
         return $this->belongsTo(Modules::class);

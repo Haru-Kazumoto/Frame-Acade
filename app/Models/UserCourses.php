@@ -17,5 +17,10 @@ class UserCourses extends Model
         "done_at"
     ];
 
+    protected $hidden = [
+        'created_at',
+        'updated_at'
+    ];
+
 
 }
