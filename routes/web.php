@@ -29,18 +29,19 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-    Route::get("/my-courses",[MyCoursesController::class,'index'])->name("my-courses");
-    Route::get("/all-courses",[AllCoursesController::class,'index'])->name("all-courses");
-    Route::get("/course/{id}",[AllCoursesController::class,"detail"])->name("detail-course");
-    Route::get("/enrolled/{course_id}",[AllCoursesController::class,"enrolled"])->name("enrolled-courses");
-    Route::get("/learn/{course_id}",[MyCoursesController::class,"learn"])->name("learn-course");
-    Route::get("/reward",[MyCoursesController::class,"certificate"])->name("cs");
+    Route::get("/my-courses", [MyCoursesController::class, 'index'])->name("my-courses");
+    Route::get("/all-courses", [AllCoursesController::class, 'index'])->name("all-courses");
+    Route::get("/course/{id}", [AllCoursesController::class, "detail"])->name("detail-course");
+    Route::get("/enrolled/{course_id}", [AllCoursesController::class, "enrolled"])->name("enrolled-courses");
+    Route::get("/learn/{course_id}", [MyCoursesController::class, "learn"])->name("learn-course");
+    Route::get("/reward", [MyCoursesController::class, "certificate"])->name("cs");
+    Route::get('/certification', [CertificationController::class, 'index'])->name("certification");
 });
 
-Route::middleware('auth')->prefix("/certifications")->group(function(){
-    Route::get("",[CertificationController::class, 'download']);
+Route::middleware('auth')->prefix("/certifications")->group(function () {
+    Route::get("", [CertificationController::class, 'download']);
 });
 
-Route::get('/test', [CertificationController::class, 'index']);
+Route::get('/test', [CertificationController::class, 'get']);
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
