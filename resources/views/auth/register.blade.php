@@ -1,7 +1,6 @@
 <x-guest-layout>
 
-
-    <div class="flex flex-col justify-center w-1/2 px-40">
+    <div class="flex flex-col justify-center mx-auto px-[2rem]">
         <div class="mb-16">
             <h1 class="text-[#445069] font-extrabold text-5xl">Create Account</h1>
         </div>
@@ -46,7 +45,7 @@
                     <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
                 </div>
 
-                <div class="flex items-center justify-end mt-4">
+                <div class="flex items-center justify-between mt-4">
                     <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                         href="{{ route('login') }}">
                         {{ __('Already registered?') }}
@@ -61,9 +60,9 @@
         </div>
     </div>
 
-    <div class="relative text-white min-h-screen w-1/2 flex flex-col items-center justify-center rounded-l-[35px] px-[5rem]  gap-[1rem]"
+    <div class="relative text-white min-w-[35rem] min-h-screen w-1/2 flex flex-col items-center justify-center rounded-l-[35px] px-[5rem]  gap-[1rem] max-lg:hidden"
         style="background-color: #697899;">
-        <img src="{{ url('/Logo.png') }}" alt="logo"  class="absolute h-[50px] w-[100px] top-5 left-[70px]"/>
+        <img src="{{ url('/Logo.png') }}" alt="logo" class="absolute h-[50px] w-[100px] top-5 left-[70px]" />
         <h1 class=" text-5xl">A future needs a <span class="text-[#F6B21B]">knowledge</span>, Lets learn with us!</h1>
         <div class="h-[2px] bg-white w-[100%]"></div>
         <h1 class="text-[24px]">Frame<span class="text-[#F6B21B]">Acade</span> is a website that contains online
