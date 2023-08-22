@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Courses;
 
 use App\Http\Controllers\Controller;
 use App\Models\Courses;
+use App\Models\SubModules;
 use App\Models\UserCourses;
 use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\Support\Facades\Auth;
@@ -58,6 +59,21 @@ class MyCoursesController extends Controller {
 
 
         return view("my-course")->with("courses",$lists)->with("recent",$recent);
+    }
+
+    public function content($course_id,$submodule_id) {
+        $submodule = SubModules::where("id",$submodule_id)->where("course_id",$course_id)->first();
+        $taken_course = UserCourses::where("user_id",Auth::user()->id)->where("course_id",$course_id)->where("submodule_id",$submodule_id)->first();
+
+        return view("content")->with("submodule",$submodule)->with("taken",$taken_course);
+    }
+
+    public function next($course_id,$submodule_id) {
+        UserCourses::where("user_id",Auth::user()->id)->where("submodule_id",$submodule_id)->update([
+            "done_at" => now()
+        ]);
+
+        return redirect("/learn/".$course_id);
     }
 
     public function learn($course_id) {
