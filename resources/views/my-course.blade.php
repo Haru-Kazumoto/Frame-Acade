@@ -3,7 +3,7 @@
 <x-app-layout>
     <x-slot name="header" class="fixed">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Selamat datang,') }} {{ Auth::user()->username . '!' }}
+            {{ __('Welcome back,') }} {{ Auth::user()->username . '!' }}
         </h2>
     </x-slot>
 
