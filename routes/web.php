@@ -5,6 +5,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Courses\MyCoursesController;
 use App\Http\Controllers\Courses\AllCoursesController;
+use App\Models\Certifications;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,10 +22,6 @@ Route::get('/', function () {
     return redirect('/login');
 });
 
-//Route::get('/dashboard', function () {
-//    return view('dashboard');
-//})->middleware(['auth'])->name('dashboard');
-
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
@@ -35,8 +32,9 @@ Route::middleware('auth')->group(function () {
     Route::get("/enrolled/{course_id}",[AllCoursesController::class,"enrolled"])->name("enrolled-courses");
     Route::get("/learn/{course_id}",[MyCoursesController::class,"learn"])->name("learn-course");
     Route::get("/learn/{course_id}/module/{submodule_id}",[MyCoursesController::class,'content'])->name("read-blog");
-    Route::geT("/next/{course_id}/{submodule_id}",[MyCoursesController::class,"next"])->name("next-course");
+    Route::get("/next/{course_id}/{submodule_id}",[MyCoursesController::class,"next"])->name("next-course");
     Route::get("/reward",[MyCoursesController::class,"certificate"])->name("cs");
+    Route::get("/certification",[CertificationController::class, 'index'])->name("certification");
 });
 
 Route::middleware('auth')->prefix("/certifications")->group(function () {

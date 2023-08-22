@@ -54,15 +54,19 @@ class MyCoursesController extends Controller {
             ')
             ->groupByRaw("user_id,courses.id,courses.name,courses.description,courses.`type`")
             ->get();
-
-
-
+            
         return view("my-course")->with("courses",$lists)->with("recent",$recent);
     }
 
     public function content($course_id,$submodule_id) {
         $submodule = SubModules::where("id",$submodule_id)->where("course_id",$course_id)->first();
-        $taken_course = UserCourses::where("user_id",Auth::user()->id)->where("course_id",$course_id)->where("submodule_id",$submodule_id)->first();
+        $taken_course = UserCourses::where(
+            "user_id",
+            Auth::user()->id
+        )
+        ->where("course_id",$course_id)
+        ->where("submodule_id",$submodule_id)
+        ->first();
 
         return view("content")->with("submodule",$submodule)->with("taken",$taken_course);
     }
@@ -81,7 +85,6 @@ class MyCoursesController extends Controller {
                 $q->where('user_id',Auth::user()->id);
             })
             ->find($course_id);
-
 
         return view("learn")->with('course',$course);
     }

@@ -16,7 +16,7 @@ class SubModulesController extends Controller {
 
         return ApiResponse::successResponse($subModules);
     }
-
+    
     public function create(Request $request){
         $request->validate([
             "name" => [

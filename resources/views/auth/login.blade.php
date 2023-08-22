@@ -1,6 +1,6 @@
 <x-guest-layout>
 
-    <div class="min-h-screen min-w-[35rem] flex flex-col items-center justify-center rounded-r-[35px] px-[2rem] max-lg:hidden gap-[3rem]"
+    <div class="min-h-screen min-w-[40rem] flex flex-col items-center justify-center rounded-r-[35px] px-[2rem] max-lg:hidden gap-[3rem]"
         style="background-color: #697899;">
         <h1 class="text-white text-5xl">Let's Start Learn With</h1>
         <a href="/" class="w-[25rem]">
