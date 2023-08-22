@@ -24,14 +24,4 @@ class Modules extends Model {
     public function subModules(): HasMany{
         return $this->hasMany(Submodules::class,"module_id","id");
     }
-//
-//    //Modules ini berelasi many to many ke Certifications
-//    public function certifications(): BelongsToMany{
-//        return $this->belongsToMany(Certifications::class);
-//    }
-//
-//    //modules ini berelasi many to many ke Frameworks
-//    public function frameworks(): BelongsToMany{
-//        return $this->belongsToMany(Frameworks::class);
-//    }
 }

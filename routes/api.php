@@ -1,8 +1,8 @@
 <?php
 
-use App\Http\Controllers\{UserController, AuthController, CertificationController, ModulesController};
-use App\Http\Controllers\Modules\SubModulesController;
-use App\Http\Controllers\MyCourseControllerApi;
+use App\Http\Controllers\{UserController, AuthController};
+use App\Http\Controllers\Courses\Api\CoursesController;
+use App\Http\Controllers\Modules\ModulesController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -36,12 +36,14 @@ Route::prefix('/auth')->group(function(){
     Route::get("/get-session", [AuthController::class, 'getSessionUser'])->middleware('auth:sanctum');
 });
 
-Route::get('/modules', [CertificationController::class, 'index']);
-
-Route::get('/all-course', [MyCourseControllerApi::class, 'getAllCourse']);
+Route::prefix("/courses")->group(function(){
+    Route::get("/get",[CoursesController::class, 'getAllCourses']);
+    Route::post('/create', [CoursesController::class, 'createCourse']);
+});
 
 Route::prefix("/modules")->group(function(){
-    Route::get('/subModules', [SubModulesController::class, 'index']);
-    Route::post('/create-subModules', [SubModulesController::class, 'create']);
-    Route::get('/get/{$id}', [ModulesController::class], 'getCourseById');
+    Route::get('/get', [ModulesController::class, 'getAllModules']);
+    Route::get('/get/{id}', [ModulesController::class,'getModuleById']);
+    Route::patch('/update/{id}', [ModulesController::class, 'updateModulebyId']);
+    Route::post('/create', [ModulesController::class, 'createModule']);
 });

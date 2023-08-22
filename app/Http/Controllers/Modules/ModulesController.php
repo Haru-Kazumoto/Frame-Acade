@@ -1,25 +1,22 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Modules;
 
 use App\Helpers\ApiResponse;
 use App\Http\Controllers\Controller;
 use App\Models\Courses;
+use App\Models\Modules;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Http\Request;
 
 class ModulesController extends Controller {
-    public function getAllCourse(){
-        $courses = Courses::with(
-            [
-                "modules",
-                "modules.subModules"
-            ])->get();
+    public function getAllModules(){
+        $courses = Modules::with('subModules')->get();
 
         return ApiResponse::successResponse($courses);
     }
 
-    public function getCourseById(int $id){
+    public function getModuleById(int $id){
         try {
             $course = Courses::findOrFail($id);
             return ApiResponse::successResponse($course);
@@ -30,5 +27,12 @@ class ModulesController extends Controller {
                 "data" => null
             ], 404);
         }
+    }
+
+    public function updateModuleById(Request $request, int $id){
+        $module = Modules::findOrFail($id);
+        $module->update($request->all());
+
+        return ApiResponse::successResponse($module);
     }
 }
