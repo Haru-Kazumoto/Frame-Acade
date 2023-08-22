@@ -25,7 +25,8 @@
                                     </div>
                                     <div class="flex justify-between mb-1 mt-3">
                                         <span class="text-sm font-medium text-black">Progress</span>
-                                        <span class="text-sm font-medium text-black">{{ ($recent->done / $recent->total)*100 }}%</span>
+                                        <span
+                                            class="text-sm font-medium text-black">{{ ($recent->done / $recent->total) * 100 }}%</span>
                                     </div>
                                     <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
                                         <div class="bg-blue-600 h-2.5 rounded-full"
@@ -58,8 +59,9 @@
                         @foreach ($courses as $course)
                             <div class="mt-5">
                                 <div class="border border-gray-500 p-5 rounded-lg">
-                                    <div class="flex gap-3 items-center">
-                                        <div class="h-5 w-5 bg-gray-400 rounded-full "></div> 
+                                    <div class="flex flex-col gap-3 items-center sm:flex-row">
+                                        <img src={{ $course->logo }} alt=""
+                                            class="m-1 mx-7 object-cover w-[100px] sm:w-[70px]" />
                                         <div class="flex-1">
                                             <div class="text-lg"> {{ $course->name }} </div>
                                             <div class="text-sm">

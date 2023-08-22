@@ -13,8 +13,10 @@
                     @foreach($courses as $course)
                         <div class="mt-5">
                             <div class="border border-gray-500 p-5 rounded-lg">
-                                <div class="flex gap-3 items-center">
-                                    <img src={{ $course->logo }} alt="" class="m-1 mx-7 object-cover" width="70px"/>
+                                <div class="flex flex-col gap-3 items-center sm:flex-row">
+                                    <img src={{ $course->logo }} alt="" class="m-1 mx-7 object-cover w-[100px] sm:w-[70px]" 
+                                    {{-- width="70px" --}}
+                                    />
                                     <div class="flex-1">
                                         <div class="text-[30px] font-extrabold mb-10 flex flex-row"> {{ $course->name }}</p></div>
                                         <div class="text-sm mt-[-20px]">
