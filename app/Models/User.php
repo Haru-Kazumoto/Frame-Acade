@@ -28,10 +28,10 @@ class User extends Authenticatable {
         return $this->hasMany(Certifications::class, 'user_id');
     }
 
-    //user berelasi ont to many ke frameworks
-    public function frameworks(): HasMany{
-        return $this->hasMany(Frameworks::class, 'user_id');
-    }
+    // //user berelasi ont to many ke frameworks
+    // public function frameworks(): HasMany{
+    //     return $this->hasMany(Frameworks::class, 'user_id');
+    // }
 
     public function validateModel(Request $request){        
         return $request->validate([

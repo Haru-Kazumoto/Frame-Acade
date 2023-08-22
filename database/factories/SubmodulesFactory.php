@@ -19,11 +19,11 @@ class SubmodulesFactory extends Factory
     public function definition(): array
     {
         return [
-            "name" => $this->faker->jobTitle,
-            "type" => "blog",
-            "content" => $this->faker->paragraph(5),
-            "course_id" => Courses::factory(),
-            "module_id" => Modules::factory()
+            // "name" => $this->faker->jobTitle,
+            // "type" => "blog",
+            // "content" => $this->faker->paragraph(5),
+            // "course_id" => Courses::factory(),
+            // "module_id" => Modules::factory()
         ];
     }
 }
