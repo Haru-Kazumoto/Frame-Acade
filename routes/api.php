@@ -46,4 +46,5 @@ Route::prefix("/modules")->group(function(){
     Route::get('/get/{id}', [ModulesController::class,'getModuleById']);
     Route::patch('/update/{id}', [ModulesController::class, 'updateModulebyId']);
     Route::post('/create', [ModulesController::class, 'createModule']);
+    Route::delete("/delete/{id}", [ModulesController::class, 'deleteModuleById']);
 });

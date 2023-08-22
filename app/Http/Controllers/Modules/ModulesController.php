@@ -35,4 +35,14 @@ class ModulesController extends Controller {
 
         return ApiResponse::successResponse($module);
     }
+
+    public function deleteModuleById($id){
+        $module = Modules::findOrFail($id);
+        $module->delete();
+
+        return response()->json([
+            "status" => "Deleted",
+            "message" => "Module {$id} has deleted"
+        ]);
+    }
 }
