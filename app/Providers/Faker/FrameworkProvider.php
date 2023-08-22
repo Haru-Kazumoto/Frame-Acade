@@ -21,37 +21,37 @@ class FrameworkProvider extends Base
     protected static $content = [
         'CakePHP' => [
             "type" => "BACKEND",
-            "description" => "CakePHP adalah kerangka kerja PHP yang mengikuti pola arsitektur MVC untuk memfasilitasi pengembangan aplikasi web dengan lebih terstruktur.",
+            "description" => "CakePHP is a PHP framework that follows the MVC architectural pattern to facilitate the development of more structured web applications.",
             "logo" => "/image/cakephp_logo.png"
         ],
         'Codeigniter' => [
             "type" => "BACKEND",
-            "description" => "CodeIgniter adalah kerangka kerja PHP yang ringan dan cepat yang dirancang untuk membangun aplikasi web dengan sedikit hambatan dan dengan penekanan pada kinerja.",
+            "description" => "CodeIgniter is a lightweight and fast PHP framework designed to build web applications with minimal bottlenecks and with an emphasis on performance.",
             "logo" => "/image/codeigniter_logo.png"
         ],
         'Laravel' => [
             "type" => "BACKEND",
-            "description" => "Laravel adalah kerangka kerja PHP yang elegan dan ekspresif yang digunakan untuk membangun aplikasi web dengan sintaksis yang menyenangkan dan fitur-fitur seperti routing, ORM, dan sistem autentikasi.",
+            "description" => "Laravel is an elegant and expressive PHP framework used to build web applications with a pleasant syntax and features such as routing, ORM, and authentication systems.",
             "logo" => "/image/laravel_logo.png"
         ],
         'SpringBoot' => [
             "type" => "BACKEND",
-            "description" => "Spring Boot adalah kerangka kerja Java yang memudahkan pengembangan aplikasi Java dengan menyediakan konfigurasi otomatis dan pendekatan 'opiniated' (berpendapat) dalam pengembangan.",
+            "description" => "Spring Boot is a Java framework that makes developing Java applications easy by providing automatic configuration and an 'opinionated' approach to development.",
             "logo" => "/image/Vector.png"
         ],
         'NextJs' => [
             "type" => "FRONTEND",
-            "description" => "Next.js adalah kerangka kerja React yang digunakan untuk membangun aplikasi web dengan fitur server-side rendering (SSR) dan pengelolaan rute yang mudah.",
+            "description" => "Next.js is a React framework used to build web applications with server-side rendering (SSR) features and easy route management.",
             "logo" => "/image/nextjs_logo.png"
         ],
         'NestJs' => [
             "type" => "BACKEND",
-            "description" => "NestJS adalah kerangka kerja Node.js yang berbasis TypeScript untuk membangun aplikasi server-side dengan arsitektur yang modular dan menggunakan pola desain yang terinspirasi oleh Angular.",
+            "description" => "NestJS is a TypeScript-based Node.js framework for building server-side applications with a modular architecture and using Angular-inspired design patterns.",
             "logo" => "/image/nestjs_logo.png"
         ],
         'Flask' => [
             "type" => "BACKEND",
-            "description" => " Flask adalah kerangka kerja web ringan dan fleksibel untuk bahasa pemrograman Python.",
+            "description" => "Flask is a lightweight and flexible web framework for the Python programming language.",
             "logo" => "/image/flask_logo.png"
         ],
         'Django' => [
@@ -61,12 +61,12 @@ class FrameworkProvider extends Base
         ],
         'ReactJs' => [
             "type" => "FRONTEND",
-            "description" => "ReactJS adalah perpustakaan JavaScript yang fokus pada pembuatan antarmuka pengguna (UI) yang interaktif.",
+            "description" => "ReactJS is a JavaScript library focused on creating interactive user interfaces (UI).",
             "logo" => "/image/react_logo.png"
         ],
         'AngularJs' => [
             "type" => "FRONTEND",
-            "description" => "AngularJS adalah kerangka kerja JavaScript yang dikembangkan oleh Google untuk membangun aplikasi web dinamis dengan fitur two-way data binding dan.",
+            "description" => "AngularJS is a JavaScript framework developed by Google for building dynamic web applications with two-way data binding and .",
             "logo" => "/image/angular_logo.png"
         ]
     ];

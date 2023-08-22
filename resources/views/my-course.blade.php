@@ -46,7 +46,7 @@
                 <div class="bg-white shadow-sm sm:rounded-lg mt-3 px-[2rem] py-[4rem]  flex flex-col ">
                     <img src="/image/0progress.png" alt="0 progress" class="mx-auto pr-[3rem] min-w-[20rem] ">
                     <h1 class="p-6 text-gray-900 text-3xl font-semibold mt-10 mx-auto">
-                        Sepertinya kamu belum belajar, ayo ambil kursus!
+                        Seem’s you have not started course anything, let’s learn!
                     </h1>
                 </div>
             @else

@@ -12,9 +12,11 @@ use App\Models\User;
 
 class UserController extends Controller {
 
-    // public function index(){
-    //     $users = $this->userRepository->getAllData(['certifications','frameworks']);
+    public function index(){
+        $users = User::with([
+            "certifications"
+        ])->get();
 
-    //     return ApiResponse::successResponse($users);
-    // }
+        return ApiResponse::successResponse($users);
+    }
 }

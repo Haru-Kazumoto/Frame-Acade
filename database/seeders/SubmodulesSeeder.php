@@ -13,6 +13,6 @@ class SubmodulesSeeder extends Seeder
      */
     public function run(): void
     {
-        Submodules::factory()->count(100)->create();
+        // Submodules::factory()->count(100)->create();
     }
 }
