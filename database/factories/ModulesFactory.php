@@ -18,7 +18,7 @@ class ModulesFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => "Module ". $this->faker->numberBetween(1,4),
+            'name' => "Module 1",
             'course_id' => Courses::factory(),
         ];
     }

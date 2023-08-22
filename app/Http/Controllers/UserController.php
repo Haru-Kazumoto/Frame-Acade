@@ -11,15 +11,11 @@ use Illuminate\Http\Request;
 use App\Models\User;
 
 class UserController extends Controller {
-    
-    private UserRepositoryInterfaces $userRepository;
-
-    public function __construct(UserRepositoryInterfaces $userRepository){
-        $this->userRepository = $userRepository;
-    }
 
     public function index(){
-        $users = $this->userRepository->getAllData(['certifications','frameworks']);
+        $users = User::with([
+            "certifications"
+        ])->get();
 
         return ApiResponse::successResponse($users);
     }

@@ -19,6 +19,12 @@ class Courses  extends Model {
         'logo'
     ];
 
+    protected $hidden = [
+        'created_at',
+        'updated_at',
+        'deleted_at'
+    ];
+
     public function modules() : HasMany {
         return $this->hasMany(Modules::class,"course_id","id");
     }

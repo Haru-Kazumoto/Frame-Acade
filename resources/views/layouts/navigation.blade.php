@@ -16,7 +16,10 @@
                         {{ __('My Courses') }}
                     </x-nav-link>
                     <x-nav-link :href="route('all-courses')" :active="request()->routeIs('all-courses')">
-                        {{ __('All Courses') }}
+                        {{ __('All courses') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('certification')" :active="request()->routeIs('certification')">
+                        {{ __('Certification') }}
                     </x-nav-link>
                 </div>
             </div>

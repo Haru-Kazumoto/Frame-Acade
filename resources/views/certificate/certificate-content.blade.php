@@ -137,10 +137,10 @@
         <div class="right-bottom"></div>
         <h1>Certification</h1>
         <p>this certifies that</p>
-        <h2 class="name">Ziaurahman Athaya</h2>
+        <h2 class="name">Ziaurrahman Athaya</h2>
         <p>has successfully completed</p>
         <h2 class="type_certification">Backend Developer Course</h2>
-        <p class="date">On 20/08/2023 At</p>
+        <p class="date">On {{ now() }} At</p>
         <div class="logo">
             <img src="./Logo-Dark.png" alt="logo" />
             <div class="divider"></div>

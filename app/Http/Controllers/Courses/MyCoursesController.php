@@ -10,30 +10,30 @@ use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
-class MyCoursesController extends Controller
-{
+class MyCoursesController extends Controller {
 
     public function index() {
 
         $course_id = UserCourses::where("user_id",Auth::user()->id)->orderBy("user_courses.done_at","desc")->first();
         if($course_id){
-        $recent = DB::table("courses")
-            ->join("user_courses","user_courses.course_id","courses.id")
-            ->where("user_courses.user_id",Auth::user()->id)
-            ->where("user_courses.deleted_at",null)
-            ->where("user_courses.done_at","<>",null)
-            ->where("courses.id",$course_id->course_id)
-            ->selectRaw('
-                user_courses.user_id,
-                courses.id,
-                courses.name,
-                courses.description,
-                courses.`type`,
-                COUNT(user_courses.id) AS total,
-                COUNT(user_courses.done_at) AS done
-            ')
-            ->groupByRaw("user_id,courses.id")
-            ->first();
+            $recent = DB::table("courses")
+                ->join("user_courses","user_courses.course_id","courses.id")
+                ->where("user_courses.user_id",Auth::user()->id)
+                ->where("user_courses.deleted_at",null)
+                ->where("user_courses.done_at","<>",null)
+                ->where("courses.id",$course_id->course_id)
+                ->selectRaw('
+                    user_courses.user_id,
+                    courses.id,
+                    courses.name,
+                    courses.description,
+                    courses.`type`,
+                    COUNT(user_courses.id) AS total,
+                    COUNT(user_courses.done_at) AS done
+                ')
+                // ->groupByRaw("user_id,courses.id")
+                ->groupByRaw("user_id,courses.id,courses.name,courses.description,courses.`type`")
+                ->first();
         }else{
             $recent = null;
         }
@@ -52,7 +52,7 @@ class MyCoursesController extends Controller
                 COUNT(user_courses.id) AS total,
                 COUNT(user_courses.done_at) AS done
             ')
-            ->groupByRaw("user_id,courses.id")
+            ->groupByRaw("user_id,courses.id,courses.name,courses.description,courses.`type`")
             ->get();
 
 
@@ -89,6 +89,7 @@ class MyCoursesController extends Controller
     public function certificate() {
 
         $pdf = Pdf::loadView('certificate.certificate-content');
+        $pdf->setPaper("A4", "landscape");
         return $pdf->download('certificate.pdf');
     }
 }

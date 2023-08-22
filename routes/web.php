@@ -18,7 +18,7 @@ use App\Http\Controllers\Courses\AllCoursesController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('/login');
 });
 
 //Route::get('/dashboard', function () {
@@ -39,10 +39,10 @@ Route::middleware('auth')->group(function () {
     Route::get("/reward",[MyCoursesController::class,"certificate"])->name("cs");
 });
 
-Route::middleware('auth')->prefix("/certifications")->group(function(){
-    Route::get("",[CertificationController::class, 'download']);
+Route::middleware('auth')->prefix("/certifications")->group(function () {
+    Route::get("", [CertificationController::class, 'download']);
 });
 
-Route::get('/test', [CertificationController::class, 'index']);
+Route::get('/test', [CertificationController::class, 'get']);
 
 require __DIR__.'/auth.php';

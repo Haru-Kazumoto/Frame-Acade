@@ -13,20 +13,15 @@ class Modules extends Model {
     protected $fillable = [
         'name',
         'course_id'
+    ];    
+
+    protected $hidden = [
+        'created_at',
+        'updated_at'
     ];
 
     //Modules ini berelasi one to many dari Submodules
     public function subModules(): HasMany{
         return $this->hasMany(Submodules::class,"module_id","id");
     }
-//
-//    //Modules ini berelasi many to many ke Certifications
-//    public function certifications(): BelongsToMany{
-//        return $this->belongsToMany(Certifications::class);
-//    }
-//
-//    //modules ini berelasi many to many ke Frameworks
-//    public function frameworks(): BelongsToMany{
-//        return $this->belongsToMany(Frameworks::class);
-//    }
 }
