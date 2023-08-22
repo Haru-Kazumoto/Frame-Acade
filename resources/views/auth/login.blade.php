@@ -1,8 +1,11 @@
 <x-guest-layout>
 
-    <div class="min-h-screen min-w-[35rem] flex flex-col items-center justify-center rounded-r-[35px] px-[2rem] max-lg:hidden gap-[3rem]"
+    <div class="min-h-screen min-w-[35rem] flex flex-col items-center justify-center rounded-r-[35px] px-[2rem] max-lg:hidden gap-[2rem]"
         style="background-color: #697899;">
-        <h1 class="text-white text-5xl">Let's Start Learn With</h1>
+        <div class="text-center text-white text-5xl font-bold">
+            <h1>Let's Start Learn</h1>
+            <h1 class="mt-[2rem]">With</h1>
+        </div>
         <a href="/" class="w-[25rem]">
             <img src="{{ url('/Logo.png') }}" alt="logo" />
         </a>

@@ -48,6 +48,7 @@ class MyCoursesController extends Controller {
                 courses.name,
                 courses.description,
                 courses.`type`,
+                courses.`logo`,
                 COUNT(user_courses.id) AS total,
                 COUNT(user_courses.done_at) AS done
             ')
