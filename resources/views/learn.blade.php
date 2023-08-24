@@ -15,7 +15,7 @@
             <div class="bg-white shadow-sm sm:rounded-lg mt-5">
                 <div class="p-6">
                     @foreach($course->modules as $module)
-                        <p class="w-full text-xl px-4 py-5 font-extrabold bg-gray-700 border border-gray-300">{{ $module->name }}</p>
+                        <p class="w-full text-xl px-4 py-5 font-extrabold bg-gray-300 border border-gray-300 rounded-t-md">{{ $module->name }}</p>
                         <ul class="w-full text-sm font-medium bg-white border border-gray-300">
                             @foreach($module->subModules as $submodule)
                                 <li class="w-full px-4 py-2 border-b border-gray-300 flex items-center justify-between">
