@@ -20,7 +20,7 @@ class MyCoursesController extends Controller {
                 ->join("user_courses","user_courses.course_id","courses.id")
                 ->where("user_courses.user_id",Auth::user()->id)
                 ->where("user_courses.deleted_at",null)
-                ->where("user_courses.done_at","<>",null)
+                // ->where("user_courses.done_at","<>",null)
                 ->where("courses.id",$course_id->course_id)
                 ->selectRaw('
                     user_courses.user_id,
@@ -28,6 +28,7 @@ class MyCoursesController extends Controller {
                     courses.name,
                     courses.description,
                     courses.`type`,
+                    courses.`logo`,
                     COUNT(user_courses.id) AS total,
                     COUNT(user_courses.done_at) AS done
                 ')
