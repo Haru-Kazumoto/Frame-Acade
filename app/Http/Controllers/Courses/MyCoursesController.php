@@ -32,7 +32,8 @@ class MyCoursesController extends Controller {
                     COUNT(user_courses.id) AS total,
                     COUNT(user_courses.done_at) AS done
                 ')
-                ->groupByRaw("user_id,courses.id,courses.name,courses.description,courses.`type`")
+                ->groupByRaw("user_id,courses.id,courses.name,courses.description,courses.`type`,courses.`logo`")
+
                 ->first();
         }else{
             $recent = null;
@@ -53,7 +54,8 @@ class MyCoursesController extends Controller {
                 COUNT(user_courses.id) AS total,
                 COUNT(user_courses.done_at) AS done
             ')
-            ->groupByRaw("user_id,courses.id,courses.name,courses.description,courses.`type`")
+            ->groupByRaw("user_id,courses.id,courses.name,courses.description,courses.`type`,courses.`logo`")
+
             ->get();
             
         return view("my-course")->with("courses",$lists)->with("recent",$recent);
