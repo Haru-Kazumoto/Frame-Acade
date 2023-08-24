@@ -35,6 +35,7 @@ Route::middleware('auth')->group(function () {
     Route::get("/next/{course_id}/{submodule_id}",[MyCoursesController::class,"next"])->name("next-course");
     Route::get("/reward",[MyCoursesController::class,"certificate"])->name("cs");
     Route::get("/certification",[CertificationController::class, 'index'])->name("certification");
+    Route::get("/notifications", [MyCoursesController::class, 'notifications'])->name("notifications");
 });
 
 Route::middleware('auth')->prefix("/certifications")->group(function () {
