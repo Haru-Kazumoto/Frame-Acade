@@ -1,4 +1,4 @@
-{{-- @dd($courses, $recent); --}}
+{{-- @dd($recent, $courses, ); --}}
 
 <x-app-layout>
     <x-slot name="header" class="fixed">
@@ -17,7 +17,9 @@
                     <div class="p-6">
                         <div class="border border-gray-500 p-5 rounded-lg">
                             <div class="flex gap-3 items-center">
-                                <div class="h-5 w-5 bg-gray-400 rounded-full "></div>
+                                {{-- <div class="h-5 w-5 bg-gray-400 rounded-full "></div> --}}
+                                <img src={{ $recent->logo }} alt=""
+                                            class="m-1 mx-7 object-cover w-[100px] sm:w-[70px]" />
                                 <div class="flex-1">
                                     <div class="text-lg"> {{ $recent->name }} </div>
                                     <div class="text-sm">
@@ -63,14 +65,14 @@
                                         <img src={{ $course->logo }} alt=""
                                             class="m-1 mx-7 object-cover w-[100px] sm:w-[70px]" />
                                         <div class="flex-1">
-                                            <div class="text-lg"> {{ $course->name }} </div>
+                                            <div class="text-lg"> {{ $course->name }} | {{ $course->done }} | {{ $course->total }}</div>
                                             <div class="text-sm">
                                                 {{ $course->description }}
                                             </div>
                                             <div class="flex justify-between mb-1 mt-3">
                                                 <span class="text-sm font-medium text-black">Progress</span>
                                                 <span
-                                                    class="text-sm font-medium text-black">{{ ($course->done / $course->total) * 100 }}%</span>
+                                                    class="text-sm font-medium text-black">{{ (($course->done / $course->total) * 100) }}%</span>
                                             </div>
                                             <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
                                                 <div class="bg-blue-600 h-2.5 rounded-full"

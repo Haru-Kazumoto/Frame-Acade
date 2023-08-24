@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Backend Developer Certificate</title>
     <style>
-        @import url("https://fonts.googleapis.com/css2?family=Imperial+Script&family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@400;600&display=swap");
+        @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Imperial+Script&family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@400;600&display=swap');
 
         body {
             margin: 0;
@@ -23,12 +23,13 @@
             flex-direction: column;
             justify-content: center;
             border: 10px solid black;
+            overflow: hidden;
         }
 
         .group {
             margin-top: 8rem;
         }
-
+        
         h1,
         h2,
         h3 {
@@ -59,7 +60,7 @@
         .footer {
             position: relative;
             margin: 0 auto;
-            width: 40rem;
+            width: 35rem;
         }
 
         .footer-content {
@@ -74,6 +75,13 @@
             width: 200px;
         }
 
+        .founder-name {
+            margin: 0;
+            font-weight: bold;
+            margin-top: 10px;
+            font-size: 18px;
+        }
+        
         .founder {
             margin: 5px 0;
         }
@@ -82,12 +90,13 @@
             right: 0;
             position: absolute;
             top: 50px;
+            margin-right: 20px;
         }
 
         .logo {
             position: absolute;
-            top: 20px;
-            left: 20px;
+            top: 60px;
+            left: 60px;
         }
 
         .logo_image {
@@ -103,6 +112,55 @@
             width: 100px;
         }
 
+        
+        .left-top {
+            top: 0;
+            left: 0;
+            position: absolute;
+            background-color: #697899;
+            width: 300px;
+            height: 300px;
+            transform: rotate(45deg);
+            margin-top: -190px;
+            margin-left: -190px;
+        }
+
+        .right-top {
+            top: 0;
+            right: 0;
+            position: absolute;
+            background-color: #697899;
+            width: 300px;
+            height: 300px;
+            transform: rotate(45deg);
+            margin-top: -190px;
+            margin-right: -190px;
+        }
+
+        .left-bottom {
+            bottom: 0;
+            left: 0;
+            position: absolute;
+            background-color: #697899;
+            width: 300px;
+            height: 300px;
+            transform: rotate(-50deg);
+            margin-bottom: -170px;
+            margin-left: -190px;
+        }
+
+        .right-bottom {
+            bottom: 0;
+            right: 0;
+            position: absolute;
+            background-color: #697899;
+            width: 300px;
+            height: 300px;
+            transform: rotate(50deg);
+            margin-bottom: -170px;
+            margin-right: -190px;
+        }
+        
         @media print {
             .certificate {
                 background-color: white;
@@ -128,13 +186,18 @@
             </p>
             <div class="footer">
                 <div class="logo-signature">
-                    <img src="./signature.png" alt="" class="signature" />
+                    <img src="./signature-zia.jpg" alt="" class="signature" />
                     <div class="divider"></div>
+                    <p class="founder-name">Ziaurrahman Athaya</p>
                     <p class="founder">CEO FrameAcade</p>
                 </div>
                 <p class="date">August 23, 2023</p>
             </div>
         </div>
+        <div class="left-top"></div>
+        <div class="left-bottom"></div>
+        <div class="right-top"></div>
+        <div class="right-bottom"></div>
     </div>
 </body>
 
