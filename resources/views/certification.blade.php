@@ -17,9 +17,13 @@
                     <img src="/image/code.svg" alt="code" class="w-[50px] h-[30px]">
                     <h1 class="font-extrabold text-[20px]">Learn minimum 3 course of Backend framework.</h1>
                 </div>
-                <div class="px-[1rem] p-[1rem] flex gap-[2rem]  items-center">
-                    <img src="/image/card_membership.svg" alt="code" class="w-[50px] h-[30px]">
-                    <h1 class="font-extrabold text-[20px]">Get your certificate!</h1>
+                <div class="px-[1rem] p-[1rem] flex justify-between  items-center">
+                    <div class="flex gap-[2rem]">
+                        <img src="/image/card_membership.svg" alt="code" class="w-[50px] h-[30px]">
+                        <h1 class="font-extrabold text-[20px]">Get your certificate!</h1>
+                    </div>
+                    <button class="bg-[#F6B21B] py-[5px] px-[10px] rounded-lg disabled:opacity-50"
+                        disabled>Download</button>
                 </div>
             </div>
 
@@ -32,13 +36,14 @@
                     <img src="/image/code.svg" alt="code" class="w-[50px] h-[30px]">
                     <h1 class="font-extrabold text-[20px]">Learn minimum 3 course of Frontend framework.</h1>
                 </div>
-                <div class="px-[1rem] p-[1rem] flex gap-[2rem]  items-center">
-                    <img src="/image/card_membership.svg" alt="code" class="w-[50px] h-[30px]">
-                    <h1 class="font-extrabold text-[20px]">Get your certificate!</h1>
+                <div class="px-[1rem] p-[1rem] flex justify-between  items-center">
+                    <div class="flex gap-[2rem]">
+                        <img src="/image/card_membership.svg" alt="code" class="w-[50px] h-[30px]">
+                        <h1 class="font-extrabold text-[20px]">Get your certificate!</h1>
+                    </div>
+                    <button class="bg-[#F6B21B] py-[5px] px-[10px] rounded-lg disabled:opacity-50"
+                        disabled>Download</button>
                 </div>
-                <button>
-                    
-                </button>
             </div>
 
         </div>
