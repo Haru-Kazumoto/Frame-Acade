@@ -10,6 +10,7 @@ class Notification extends Model {
 
     protected $fillable = [
         "title",
-        "message"
+        "message",
+        "notifDate"
     ];
 }

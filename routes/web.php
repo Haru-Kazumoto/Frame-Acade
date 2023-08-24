@@ -1,11 +1,10 @@
 <?php
 
-use App\Http\Controllers\CertificationController;
+use App\Http\Controllers\Certifications\CertificationController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Courses\MyCoursesController;
-use App\Http\Controllers\Courses\AllCoursesController;
-use App\Models\Certifications;
+use App\Http\Controllers\Courses\{MyCoursesController,AllCoursesController};
+use App\Http\Controllers\Notification\NotificationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,7 +34,7 @@ Route::middleware('auth')->group(function () {
     Route::get("/next/{course_id}/{submodule_id}",[MyCoursesController::class,"next"])->name("next-course");
     Route::get("/reward",[MyCoursesController::class,"certificate"])->name("cs");
     Route::get("/certification",[CertificationController::class, 'index'])->name("certification");
-    Route::get("/notifications", [MyCoursesController::class, 'notifications'])->name("notifications");
+    Route::get("/notifications", [NotificationController::class, 'notifications'])->name("notifications");
 });
 
 Route::middleware('auth')->prefix("/certifications")->group(function () {

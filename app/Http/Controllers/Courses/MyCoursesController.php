@@ -4,7 +4,6 @@ namespace App\Http\Controllers\Courses;
 
 use App\Http\Controllers\Controller;
 use App\Models\Courses;
-use App\Models\Notification;
 use App\Models\SubModules;
 use App\Models\UserCourses;
 use Barryvdh\DomPDF\Facade\Pdf;
@@ -29,6 +28,7 @@ class MyCoursesController extends Controller {
                     courses.name,
                     courses.description,
                     courses.`type`,
+                    courses.`logo`,
                     COUNT(user_courses.id) AS total,
                     COUNT(user_courses.done_at) AS done
                 ')
@@ -95,15 +95,5 @@ class MyCoursesController extends Controller {
         $pdf = Pdf::loadView('certificate.certificate-content');
         $pdf->setPaper("A4", "landscape");
         return $pdf->download('certificate.pdf');
-    }
-
-    public function notifications(){
-
-        $notifications = Notification::all();
-
-        $countNotif = $notifications->count();
-        return view('notifications')
-            ->with('notification', $notifications)
-            ->with('countNotif', $countNotif);
     }
 }

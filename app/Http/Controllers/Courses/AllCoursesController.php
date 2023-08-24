@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Courses;
 
 use App\Http\Controllers\Controller;
 use App\Models\Courses;
+use App\Models\Notification;
 use App\Models\SubModules;
 use App\Models\UserCourses;
 use Illuminate\Support\Facades\Auth;
@@ -34,6 +35,13 @@ class AllCoursesController extends Controller
         }
 
         DB::commit();
+
+        
+        Notification::create([
+            "title" => "New course has added to your list!",
+            "notifDate" => now(),
+            "message" => "You have choosed a new course for your learning, congrats! Happy good learn!"
+        ]);
 
         return redirect("my-courses");
     }

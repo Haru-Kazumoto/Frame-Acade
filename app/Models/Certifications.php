@@ -24,7 +24,7 @@ class Certifications extends Model
 
     //Certifications ini berelasi many to one ke Users
     public function users(): BelongsTo{
-        return $this->belongsTo(Users::class);
+        return $this->belongsTo(User::class);
     }
 
     //Certitications ini berelasi many to many ke Modules

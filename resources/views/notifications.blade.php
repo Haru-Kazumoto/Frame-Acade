@@ -12,7 +12,7 @@
                     <h2 class="font-bold text-lg flex">Title : {{ $notif->title }}</p></h2>
                     <h2 class="font-bold text-lg flex">Date : {{ $notif->notifDate }}</h2>
                     <h2 class="font-bold text-lg flex mb-5">Message : {{ $notif->message }}</h2>
-                    <div class="border-t-2 border-black"></div>
+                    <div class="border-t-2 border-black">
                 </div>
             @endforeach
         </div>
