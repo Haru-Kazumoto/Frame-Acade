@@ -7,9 +7,10 @@
     <meta name="description" content="Ini adalah contoh halaman dengan tag meta">
     <meta name="keywords" content="contoh, tag, meta, HTML">
     <meta name="author" content="Nama Penulis">
-    <meta property="og:title" content="Contoh Halaman dengan Tag Meta">
-    <meta property="og:description" content="Ini adalah contoh halaman dengan tag meta untuk sosial media">
-    <meta property="og:url" content="http://54.84.223.231:8000/login">
+    <meta property="og:title" content="Frame Acade"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:description" content="Ini adalah contoh halaman dengan tag meta untuk sosial media" />
+    <meta property="og:url" content="http://54.84.223.231:8000/login" />
     {{-- <meta property="og:image" content="link_gambar.jpg"> --}}
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
