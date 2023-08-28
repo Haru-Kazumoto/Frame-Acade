@@ -12,7 +12,7 @@
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white shadow-sm sm:rounded-lg mt-5">
+            <div class="bg-white shadow-sm sm:rounded-lg mt-5 w-[44rem] mx-auto">
                 <div class="p-6">
                     {{ $submodule->content }}
                 </div>
