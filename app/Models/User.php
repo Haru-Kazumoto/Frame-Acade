@@ -28,6 +28,11 @@ class User extends Authenticatable {
         return $this->hasMany(Certifications::class, 'user_id');
     }
 
+    //User berelasi one to many ke notifications
+    public function notifications(): HasMany {
+        return $this->hasMany(Notification::class, 'user_id');
+    }
+
     public function validateModel(Request $request){        
         return $request->validate([
             'username' => [

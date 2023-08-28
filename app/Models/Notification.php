@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Notification extends Model {
     use HasFactory;
@@ -11,6 +12,11 @@ class Notification extends Model {
     protected $fillable = [
         "title",
         "message",
-        "notifDate"
+        "notifDate",
+        "user_id"
     ];
+
+    public function users(): BelongsTo{
+        return $this->belongsTo(User::class);
+    }
 }
