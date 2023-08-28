@@ -38,11 +38,11 @@ class AllCoursesController extends Controller
 
         $selectedCourse = Courses::find($course_id);
 
+
         Notification::create([
             "title" => "New course has added to your list!",
             "notifDate" => now(),
-            "message" => "You have choosed {$selectedCourse->name} course for your learning, congrats! Happy good learn!",
-            "user_id" => Auth::user()->id
+            "message" => "You have chosen {$selectedCourse->name} course for your learning, congrats! Happy learning!"
         ]);
 
         return redirect("my-courses");
