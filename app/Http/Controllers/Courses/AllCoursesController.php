@@ -36,7 +36,6 @@ class AllCoursesController extends Controller
 
         DB::commit();
 
-        // $courses = Courses::all();
         $selectedCourse = Courses::find($course_id);
 
 

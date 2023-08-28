@@ -16,6 +16,8 @@ return new class extends Migration
             $table->string("title");
             $table->string("message");
             $table->date("notifDate");
+            
+            $table->foreignId('user_id')->constrained('users')->cascadeOnDelete();
             $table->timestamps();
         });
     }
