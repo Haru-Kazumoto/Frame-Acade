@@ -186,7 +186,7 @@
             </p>
             <div class="footer">
                 <div class="logo-signature">
-                    <img src="./signature-zia.jpg" alt="" class="signature" />
+                    <img src="./signature-zia.png" alt="" class="signature" />
                     <div class="divider"></div>
                     <p class="founder-name">Ziaurrahman Athaya</p>
                     <p class="founder">CEO FrameAcade</p>
