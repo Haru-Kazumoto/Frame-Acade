@@ -9,7 +9,7 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white shadow-sm sm:rounded-lg mt-5">
                 <div class="p-6">
-                    <x-search-input></x-search-input>
+                    {{-- <x-search-input></x-search-input> --}}
                     @foreach($courses as $course)
                         <div class="mt-5">
                             <div class="border border-gray-500 p-5 rounded-lg">

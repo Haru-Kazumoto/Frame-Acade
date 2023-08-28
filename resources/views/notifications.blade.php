@@ -8,7 +8,7 @@
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             @foreach ($notification as $notif)
-                <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg p-6 flex flex-col relative">
+                <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg p-6 flex flex-col relative mt-5">
                     <h2 class="font-bold text-lg flex justify-end">{{ $notif->notifDate }}</h2>
                     <div>
                         <h2 class="font-bold text-lg flex">Title : {{ $notif->title }}</h2>
