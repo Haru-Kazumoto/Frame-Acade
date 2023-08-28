@@ -16,6 +16,7 @@
                     </div>
                     <div class="border-t-2 border-black">
                     </div>
+                </div>
             @endforeach
         </div>
     </div>
