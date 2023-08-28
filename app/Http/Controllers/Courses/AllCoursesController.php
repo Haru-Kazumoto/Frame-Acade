@@ -36,12 +36,14 @@ class AllCoursesController extends Controller
 
         DB::commit();
 
-        $courses = Courses::all();
+        // $courses = Courses::all();
+        $selectedCourse = Courses::find($course_id);
+
 
         Notification::create([
             "title" => "New course has added to your list!",
             "notifDate" => now(),
-            "message" => "You have choosed $courses->name course for your learning, congrats! Happy good learn!"
+            "message" => "You have chosen {$selectedCourse->name} course for your learning, congrats! Happy learning!"
         ]);
 
         return redirect("my-courses");
