@@ -15,6 +15,14 @@ export default {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
             },
         },
+        screens: {
+            'ss': '550px',   // Small screens
+            'sm': '640px',   // Small screens
+            'md': '768px',   // Medium screens
+            'lg': '1024px',  // Large screens
+            'xl': '1280px',  // Extra large screens
+            // Add more breakpoints if needed
+        }
     },
 
     plugins: [forms],

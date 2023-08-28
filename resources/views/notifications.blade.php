@@ -6,13 +6,16 @@
     </x-slot>
 
     <div class="py-12">
-        <div class="w-[50rem] mx-auto sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             @foreach ($notification as $notif)
-                <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg p-6">
-                    <h2 class="font-bold text-lg flex">Title : {{ $notif->title }}</p></h2>
-                    <h2 class="font-bold text-lg flex">Date : {{ $notif->notifDate }}</h2>
-                    <h2 class="font-bold text-lg flex mb-5">Message : {{ $notif->message }}</h2>
+                <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg p-6 flex flex-col relative">
+                    <h2 class="font-bold text-lg flex justify-end">{{ $notif->notifDate }}</h2>
+                    <div>
+                        <h2 class="font-bold text-lg flex">Title : {{ $notif->title }}</h2>
+                        <h2 class="font-bold text-lg flex mb-5">Message : {{ $notif->message }}</h2>
+                    </div>
                     <div class="border-t-2 border-black">
+                    </div>
                 </div>
             @endforeach
         </div>

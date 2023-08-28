@@ -16,7 +16,7 @@
                     </h1>
                     <div class="p-6">
                         <div class="border border-gray-500 p-5 rounded-lg">
-                            <div class="flex gap-3 items-center">
+                            <div class="flex flex-col gap-3 items-center sm:flex-row">
                                 <img src={{ $recent->logo }} alt="" class="m-1 mx-7 object-cover w-[100px] sm:w-[70px]" />
                                 <div class="flex-1">
                                     <div class="text-lg font-extrabold"> {{ $recent->name }} </div>

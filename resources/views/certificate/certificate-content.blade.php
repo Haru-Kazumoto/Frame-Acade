@@ -177,9 +177,9 @@
         <div class="group">
             <h1 class="certification">CERTIFICATE</h1>
             <p>This is to certify that</p>
-            <h2>Ziaurrahman Athaya</h2>
+            <h2>Muhammad Akhbar Firdaus</h2>
             <p>has successfully completed the</p>
-            <h3>Backend Developer Course</h3>
+            <h3>Frontend Developer Course</h3>
             <p>
                 with a deep understanding of backend technologies and
                 development.
