@@ -17,7 +17,8 @@
                     <div class="p-6">
                         <div class="border border-gray-500 p-5 rounded-lg">
                             <div class="flex flex-col gap-3 items-center sm:flex-row">
-                                <img src={{ $recent->logo }} alt="" class="m-1 mx-7 object-cover w-[100px] sm:w-[70px]" />
+                                <img src={{ $recent->logo }} alt=""
+                                    class="m-1 mx-7 object-cover w-[100px] sm:w-[70px]" />
                                 <div class="flex-1">
                                     <div class="text-lg font-extrabold"> {{ $recent->name }} </div>
                                     <div class="text-sm">
@@ -25,7 +26,8 @@
                                     </div>
                                     <div class="flex justify-between mb-1 mt-3">
                                         <span class="text-sm font-medium text-black">Progress</span>
-                                        <span class="text-sm font-medium text-black">{{ ($recent->done / $recent->total) * 100 }}%</span>
+                                        <span
+                                            class="text-sm font-medium text-black">{{ ($recent->done / $recent->total) * 100 }}%</span>
                                     </div>
                                     <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
                                         <div class="bg-blue-600 h-2.5 rounded-full"
@@ -43,8 +45,10 @@
             @endif
 
             @if ($courses->isEmpty())
-                <div class="bg-white shadow-sm sm:rounded-lg mt-3 px-[2rem] py-[4rem]  flex flex-col ">
-                    <img src="/image/0progress.png" alt="0 progress" class="mx-auto pr-[3rem] min-w-[20rem] ">
+                <div
+                    class="bg-white shadow-sm sm:rounded-lg mt-3 px-[2rem] py-[4rem] max-w-[70rem] mx-auto  flex flex-col ">
+                    <img src="/image/0progress.png" alt="0 progress"
+                        class="mx-auto pr-[3rem] w-[15rem]">
                     <h1 class="p-6 text-gray-900 text-3xl font-semibold mt-10 mx-auto">
                         Seem’s you have not started course anything, let’s learn!
                     </h1>
@@ -62,14 +66,14 @@
                                         <img src={{ $course->logo }} alt=""
                                             class="m-1 mx-7 object-cover w-[100px] sm:w-[70px]" />
                                         <div class="flex-1">
-                                            <div class="text-lg font-extrabold"> {{ $course->name }} </div> 
+                                            <div class="text-lg font-extrabold"> {{ $course->name }} </div>
                                             <div class="text-sm">
                                                 {{ $course->description }}
                                             </div>
                                             <div class="flex justify-between mb-1 mt-3">
                                                 <span class="text-sm font-medium text-black">Progress</span>
                                                 <span
-                                                    class="text-sm font-medium text-black">{{ (($course->done / $course->total) * 100) }}%</span>
+                                                    class="text-sm font-medium text-black">{{ ($course->done / $course->total) * 100 }}%</span>
                                             </div>
                                             <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
                                                 <div class="bg-blue-600 h-2.5 rounded-full"
